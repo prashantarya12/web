@@ -6,5 +6,5 @@
     "forgot_password_description": "Después de instalar Pi-hole por primera vez, se genera una contraseña y se muestra al usuario. La contraseña no se podrá recuperar más adelante, pero es posible establecer una nueva contraseña (o deshabilitar explícitamente la contraseña al establecer una contraseña vacía) usando el comando:",
     "Wrong Password!": "¡Contraseña incorrecta!",
     "You will be transferred to the \"{{page}}\" page": "Serás trasferido a la página {{page}}",
-    "Verify that cookies are allowed for {{host}}": "Verifique que las cookies estén permitidas para {{host}}"
+    "Verify that cookies are allowed for {{host}}": "Verifica que las cookies estén permitidas para {{host}}"
 }
