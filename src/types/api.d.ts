@@ -170,11 +170,11 @@ interface ApiSummary {
 }
 
 interface ApiUpstreams {
-  upstreams: {
+  upstreams: Array<{
     name: string;
     ip: string;
     count: number;
-  }[];
+  }>;
   forwarded_queries: number;
   total_queries: number;
 }

@@ -21,10 +21,7 @@ export interface GenericDoughnutChartProps {
   labels: string[];
 }
 
-export class GenericDoughnutChart extends Component<
-  GenericDoughnutChartProps,
-  {}
-> {
+export class GenericDoughnutChart extends Component<GenericDoughnutChartProps> {
   private readonly chartRef: RefObject<Doughnut>;
 
   constructor(props: GenericDoughnutChartProps) {
@@ -80,10 +77,10 @@ export class GenericDoughnutChart extends Component<
         <div className="card-body">
           <div className="float-left" style={{ width: "67%" }}>
             <Doughnut
+              ref={this.chartRef}
               width={100}
               height={250}
               options={options}
-              ref={this.chartRef}
               data={{
                 datasets: [
                   {
@@ -176,7 +173,7 @@ export const transformData = (apiData: ChartItem[]) => {
       i < colors.length
         ? colors[i]
         : "#" +
-            parseInt(String(Math.random() * 0xffffff), 10)
+            Number.parseInt(String(Math.random() * 0xffffff), 10)
               .toString(16)
               .padStart(6, "0")
     );

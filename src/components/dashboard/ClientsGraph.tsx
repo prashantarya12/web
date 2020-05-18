@@ -32,8 +32,7 @@ export interface ClientsGraphProps {
 }
 
 export class ClientsGraph extends Component<
-  ClientsGraphProps & WithTranslation,
-  {}
+  ClientsGraphProps & WithTranslation
 > {
   private readonly graphRef: RefObject<Line>;
 
@@ -51,7 +50,7 @@ export class ClientsGraph extends Component<
         mode: "x-axis",
         callbacks: {
           title: tooltipItem => {
-            const time = moment(tooltipItem[0].xLabel!, "HH:mm");
+            const time = moment(tooltipItem[0].xLabel, "HH:mm");
 
             const fromTime = time.clone().subtract(5, "minutes");
             const toTime = time.clone().add(4, "minutes").add(59, "seconds");
@@ -103,6 +102,7 @@ export class ClientsGraph extends Component<
         </div>
         <div className="card-body">
           <Line
+            ref={this.graphRef}
             width={970}
             height={170}
             data={{
@@ -110,7 +110,6 @@ export class ClientsGraph extends Component<
               datasets: this.props.datasets
             }}
             options={options}
-            ref={this.graphRef}
           />
         </div>
 
@@ -191,7 +190,7 @@ export const transformData = (
         i < colors.length
           ? colors[i]
           : "#" +
-            parseInt(String(Math.random() * 0xffffff), 10)
+            Number.parseInt(String(Math.random() * 0xffffff), 10)
               .toString(16)
               .padStart(6, "0"),
       pointRadius: 0,

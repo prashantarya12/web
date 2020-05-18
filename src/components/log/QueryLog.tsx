@@ -8,7 +8,7 @@
  * This file is copyright under the latest version of the EUPL.
  * Please see LICENSE file for your rights under this license. */
 
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import ReactTable, {
   Filter,
   ReactTableFunction,
@@ -134,7 +134,7 @@ class QueryLog extends Component<WithTranslation, QueryLogState> {
             break;
           }
 
-          filters.query_type = parseInt(filter.value);
+          filters.query_type = Number.parseInt(filter.value);
           break;
         case "domain":
           if (filter.value.length === 0) {
@@ -167,6 +167,7 @@ class QueryLog extends Component<WithTranslation, QueryLogState> {
               filters.status = filter.value;
               break;
           }
+
           break;
         case "dnssec":
           if (filter.value === "all") {
@@ -243,14 +244,29 @@ class QueryLog extends Component<WithTranslation, QueryLogState> {
 
     return (
       <ReactTable
+        showPaginationTop
         className="-striped bg-white mb-4"
         style={{ lineHeight: 1 }}
         columns={columns(t)}
-        showPaginationTop
         sortable={false}
         filterable={false}
         data={this.state.history}
         loading={this.state.loading}
+        defaultFiltered={[
+          {
+            id: "time",
+            value: getDefaultRange(t)
+          }
+        ]}
+        getTrProps={this.getRowProps}
+        ofText={this.state.atEnd ? "of" : "of at least"}
+        PadRowComponent={() => (
+          <span>
+            &nbsp;
+            <br />
+            &nbsp;
+          </span>
+        )}
         onFetchData={state => {
           if (isEqual(state.filtered, this.state.filters)) {
             // If the filters have not changed, do not debounce the fetch.
@@ -263,6 +279,7 @@ class QueryLog extends Component<WithTranslation, QueryLogState> {
             return debounce(this.fetchQueries, 350)(state);
           }
         }}
+        // Pad empty rows to have the same height as filled rows
         onFilteredChange={debounce(filters => {
           if (isEqual(filters, this.state.filters)) {
             return;
@@ -277,22 +294,6 @@ class QueryLog extends Component<WithTranslation, QueryLogState> {
             history: []
           });
         }, 300)}
-        defaultFiltered={[
-          {
-            id: "time",
-            value: getDefaultRange(t)
-          }
-        ]}
-        getTrProps={this.getRowProps}
-        ofText={this.state.atEnd ? "of" : "of at least"}
-        // Pad empty rows to have the same height as filled rows
-        PadRowComponent={() => (
-          <span>
-            &nbsp;
-            <br />
-            &nbsp;
-          </span>
-        )}
       />
     );
   }
@@ -366,7 +367,7 @@ const queryTypes = ["A", "AAAA", "ANY", "SRV", "SOA", "PTR", "TXT"];
 const selectionFilter = (
   items: string[],
   t: TFunction,
-  extras: { name: string; value: any }[] = []
+  extras: Array<{ name: string; value: any }> = []
 ) => {
   return ({
     filter,
@@ -376,9 +377,9 @@ const selectionFilter = (
     onChange: ReactTableFunction;
   }) => (
     <select
-      onChange={event => onChange(event.target.value)}
       style={{ width: "100%" }}
       value={filter ? filter.value : "all"}
+      onChange={event => onChange(event.target.value)}
     >
       <option value="all">{t("All")}</option>
       {extras.map((extra, i) => (
@@ -416,11 +417,11 @@ const columns = (t: TFunction) => [
       const second = padNumber(date.getSeconds());
 
       return (
-        <Fragment>
+        <>
           {month + ", " + dayOfMonth}
           <br />
           {hour + ":" + minute + ":" + second}
-        </Fragment>
+        </>
       );
     },
     filterable: true,
@@ -434,6 +435,7 @@ const columns = (t: TFunction) => [
     }) => (
       <TranslatedTimeRangeSelector
         range={filter ? filter.value : null}
+        showLabel={false}
         onSelect={range => {
           if (range) {
             onChange(range);
@@ -441,7 +443,6 @@ const columns = (t: TFunction) => [
             onChange(getDefaultRange(t));
           }
         }}
-        showLabel={false}
       />
     )
   },

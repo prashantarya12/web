@@ -22,7 +22,7 @@ import NavButton from "../NavButton";
 import NavDropdown from "../NavDropdown";
 import { Form, Input, Modal, ModalFooter, ModalHeader } from "reactstrap";
 
-const tick = global.tick;
+const { tick } = global;
 
 type EnableDisableWrapper = ShallowWrapper<
   EnableDisableProps,

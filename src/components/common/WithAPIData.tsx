@@ -104,6 +104,7 @@ export class WithAPIData<T> extends Component<
         // refresh with data from the API
         setTimeout(() => this.loadData(), cancelOptions.interval);
       }
+
       return;
     }
 
@@ -140,11 +141,7 @@ export class WithAPIData<T> extends Component<
     }
   }
 
-  componentDidUpdate(
-    prevProps: Readonly<WithAPIDataProps<T>>,
-    prevState: Readonly<WithAPIDataState<T>>,
-    snapshot?: any
-  ): void {
+  componentDidUpdate(prevProps: Readonly<WithAPIDataProps<T>>): void {
     if (prevProps === this.props) {
       // Don't do anything if the props didn't change
       return;

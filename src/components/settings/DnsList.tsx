@@ -45,14 +45,14 @@ const DnsList = ({ upstreams, onAdd, onRemove }: DnsListProps) => (
     {upstreams.map(upstream => (
       <DnsListItem
         key={upstream}
-        onRemove={() => onRemove(upstream)}
         address={upstream}
+        onRemove={() => onRemove(upstream)}
       />
     ))}
     <DnsListNewItem
-      onAdd={onAdd}
       isValid={(address: string) => isAddressValid(address, upstreams)}
       upstreams={upstreams}
+      onAdd={onAdd}
     />
   </ListGroup>
 );

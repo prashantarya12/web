@@ -29,7 +29,7 @@ export interface QueriesGraphProps {
   blocked_over_time: number[];
 }
 
-class QueriesGraph extends Component<QueriesGraphProps & WithTranslation, {}> {
+class QueriesGraph extends Component<QueriesGraphProps & WithTranslation> {
   render() {
     const { t } = this.props;
 
@@ -72,8 +72,8 @@ class QueriesGraph extends Component<QueriesGraphProps & WithTranslation, {}> {
           title: tooltipItem => {
             const timeStr = tooltipItem[0].xLabel! as string;
             const time = timeStr.match(/(\d?\d):?(\d?\d?)/);
-            const hour = parseInt(time![1], 10);
-            const minute = parseInt(time![2], 10) || 0;
+            const hour = Number.parseInt(time![1], 10);
+            const minute = Number.parseInt(time![2], 10) || 0;
             const from = padNumber(hour) + ":" + padNumber(minute - 5) + ":00";
             const to = padNumber(hour) + ":" + padNumber(minute + 4) + ":59";
 

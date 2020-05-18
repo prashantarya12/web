@@ -21,8 +21,8 @@ export default ({ name, icon, isOpen, children }: NavDropdownProps) => (
   <li className={"nav-item nav-dropdown" + (isOpen ? " open" : "")}>
     <button
       className="nav-link nav-dropdown-toggle"
-      onClick={handleDropdownClick}
       type="button"
+      onClick={handleDropdownClick}
     >
       <i className={"nav-icon " + icon} />
       {name}

@@ -15,7 +15,7 @@ import { TimeRange } from "../components/common/context/TimeRangeContext";
 export class ApiClient {
   public loggedIn = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {}
 
   authenticate = (key: string): Promise<ApiSuccessResponse> => {
     return this.http.get("auth", {
@@ -178,19 +178,19 @@ export class ApiClient {
   };
 
   addExactWhitelist = (domain: string): Promise<ApiSuccessResponse> => {
-    return this.http.post("dns/whitelist/exact", { domain: domain });
+    return this.http.post("dns/whitelist/exact", { domain });
   };
 
   addExactBlacklist = (domain: string): Promise<ApiSuccessResponse> => {
-    return this.http.post("dns/blacklist/exact", { domain: domain });
+    return this.http.post("dns/blacklist/exact", { domain });
   };
 
   addRegexWhitelist = (domain: string): Promise<ApiSuccessResponse> => {
-    return this.http.post("dns/whitelist/regex", { domain: domain });
+    return this.http.post("dns/whitelist/regex", { domain });
   };
 
   addRegexBlacklist = (domain: string): Promise<ApiSuccessResponse> => {
-    return this.http.post("dns/blacklist/regex", { domain: domain });
+    return this.http.post("dns/blacklist/regex", { domain });
   };
 
   removeExactWhitelist = (domain: string): Promise<ApiSuccessResponse> => {

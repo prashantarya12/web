@@ -21,7 +21,7 @@ export interface TopTableInnerProps<T> {
   generateRows: (data: T) => ReactNode;
 }
 
-export class TopTable<T> extends Component<TopTableInnerProps<T>, {}> {
+export class TopTable<T> extends Component<TopTableInnerProps<T>> {
   static defaultProps = {
     loading: true,
     title: "",
@@ -50,7 +50,7 @@ export class TopTable<T> extends Component<TopTableInnerProps<T>, {}> {
             <tbody>
               <tr>
                 {this.props.headers.map((header, i) => (
-                  <th className="border-top-0" key={i}>
+                  <th key={i} className="border-top-0">
                     {header}
                   </th>
                 ))}
@@ -116,13 +116,13 @@ export default function <T, D>({
       }}
       renderInitial={() => (
         <TopTable
+          loading
           title={title}
           headers={headers}
           emptyMessage={emptyMessage}
           isEmpty={isEmpty}
           generateRows={generateRows}
           data={initialData}
-          loading
           {...props}
         />
       )}
@@ -140,13 +140,13 @@ export default function <T, D>({
       )}
       renderErr={() => (
         <TopTable
+          loading
           title={title}
           headers={headers}
           emptyMessage={emptyMessage}
           isEmpty={isEmpty}
           generateRows={generateRows}
           data={initialData}
-          loading
           {...props}
         />
       )}

@@ -182,7 +182,7 @@ export const paramsToString = (params: {
   [key: string]: string | number;
 }): string => {
   return Object.keys(params)
-    .map(key => key + "=" + params[key])
+    .map(key => `${key}=${params[key]}`)
     .join("&");
 };
 

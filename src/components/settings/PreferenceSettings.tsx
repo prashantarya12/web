@@ -163,6 +163,7 @@ class PreferenceSettings extends Component<
     if (this.state.translateMessage) {
       return t(this.state.alertMessage);
     }
+
     return this.state.alertMessage;
   };
 
