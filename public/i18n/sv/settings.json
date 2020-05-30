@@ -27,9 +27,9 @@
     "Successfully saved settings": "Inställningarna sparade",
     "Detected custom upstream server": "Upptäckte anpassad uppströms server",
     "DNS Options": "DNS-alternativ",
-    "Rapid Commit": "",
+    "Rapid Commit": "Snabb commit",
     "Prefix length (CIDR)": "Prefixlängd (CIDR)",
     "DNS cache size": "DNS-cachestorlek",
-    "DNS cache evictions": "",
+    "DNS cache evictions": "DNS-cache vräkning",
     "DNS cache insertions": "DNS cacheinsättningar"
 }
