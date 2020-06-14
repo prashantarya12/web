@@ -1,10 +1,10 @@
 {
-    "Password": "",
-    "Sign in to start your session": "",
-    "Log in": "",
-    "Forgot Password": "",
-    "forgot_password_description": "",
-    "Wrong Password!": "",
-    "You will be transferred to the \"{{page}}\" page": "",
-    "Verify that cookies are allowed for {{host}}": ""
+    "Password": "סיסמה",
+    "Sign in to start your session": "להפעלה יש להיכנס",
+    "Log in": "התחברות",
+    "Forgot Password": "שכחתי סיסמה",
+    "forgot_password_description": "לאחר התקנת ה- Pi-hole, נוצרת סיסמא ומוצגת למשתמש. לא ניתן לאחזר את הסיסמה בהמשך, אך ניתן להגדיר סיסמא חדשה (או להשבית את הסיסמה על ידי הגדרת סיסמא ריקה) באמצעות הפקודה:",
+    "Wrong Password!": "סיסמה שגויה!",
+    "You will be transferred to the \"{{page}}\" page": "מעביר לדף \"{{page}}\"",
+    "Verify that cookies are allowed for {{host}}": "ודא שעוגיות מותרות ל {{host}}"
 }
