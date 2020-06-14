@@ -10,9 +10,9 @@
     "Unspecified": "",
     "Secure": "",
     "Insecure": "",
-    "Bogus": "",
-    "Abandoned": "",
-    "Reply": "",
-    "All": "",
-    "Allowed": ""
+    "Bogus": "כוזב",
+    "Abandoned": "נטוש",
+    "Reply": "השב",
+    "All": "הכול",
+    "Allowed": "מורשה"
 }
