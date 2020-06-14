@@ -1,14 +1,14 @@
 {
-    "Adding {{domain}}...": "הוספה ל",
-    "Successfully added {{domain}}": "נוסף לרשימה",
-    "Failed to add {{domain}}": "נכשל להוסיף",
-    "Note: Whitelisting a subdomain of a wildcard blocked domain is not possible.": "הערה: הלבנה של תת-דומיין מדומיין תו כללי שחסום אינו אפשרי.",
-    "Note: Only the domain and subdomains of the blocked domain will be blocked.": "",
-    "Add a domain or hostname (example.com or example)": "",
-    "{{domain}} is already added": "",
-    "Failed to remove {{domain}}": "",
-    "There are no domains in this list": "",
-    "Input a regular expression": "",
-    "Not a valid hostname": "",
-    "Not a valid regular expression": ""
+    "Adding {{domain}}...": "מוסיף {{domain}}...",
+    "Successfully added {{domain}}": "{{domain}} נוסף בהצלחה",
+    "Failed to add {{domain}}": "נכשל בהוספת {{domain}}",
+    "Note: Whitelisting a subdomain of a wildcard blocked domain is not possible.": "הערה: הלבנה של תת-דומיין מתו חופשי שחסום אינו אפשרי.",
+    "Note: Only the domain and subdomains of the blocked domain will be blocked.": "הערה: רק הדומיין ותת-הדומיינים של הדומיין החסום ייחסמו.",
+    "Add a domain or hostname (example.com or example)": "הוסף דומיין או שם מארח (example.com או דוגמא)",
+    "{{domain}} is already added": "{{domain}} כבר נוסף",
+    "Failed to remove {{domain}}": "הסרה נכשלה {{domain}}",
+    "There are no domains in this list": "לא קיימים דומיינים ברשימה",
+    "Input a regular expression": "הזן ביטוי רגיל",
+    "Not a valid hostname": "שם מארח לא חוקי",
+    "Not a valid regular expression": "ביטוי רגיל לא חוקי"
 }
