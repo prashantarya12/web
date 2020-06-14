@@ -19,7 +19,7 @@
     "shared_memory_read": "קריאה מזיכרון משותף נכשלה",
     "shared_memory_lock": "נעילת זיכרון משותף נכשלה",
     "API Error: {{error}}": "API שגיאת: {{error}}",
-    "reload_dns_error": "",
+    "reload_dns_error": "טעינת שרת DNS נכשלה",
     "shared_memory_version": "זוהתה גירסה לא תואמת של זיכרון משותף",
     "ftl_database": "שגיאה בתקשורת עם מסד הנתונים של הFTL"
 }
