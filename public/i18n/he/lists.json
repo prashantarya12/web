@@ -2,7 +2,7 @@
     "Adding {{domain}}...": "הוספה ל",
     "Successfully added {{domain}}": "נוסף לרשימה",
     "Failed to add {{domain}}": "נכשל להוסיף",
-    "Note: Whitelisting a subdomain of a wildcard blocked domain is not possible.": "",
+    "Note: Whitelisting a subdomain of a wildcard blocked domain is not possible.": "הערה: הלבנה של תת-דומיין מדומיין תו כללי שחסום אינו אפשרי.",
     "Note: Only the domain and subdomains of the blocked domain will be blocked.": "",
     "Add a domain or hostname (example.com or example)": "",
     "{{domain}} is already added": "",
