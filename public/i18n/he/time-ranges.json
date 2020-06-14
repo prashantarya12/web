@@ -1,11 +1,11 @@
 {
-  "Last 24 Hours": "",
-  "Today": "",
-  "Yesterday": "",
-  "Last 7 Days": "",
-  "Last 30 Days": "",
-  "This Month": "",
-  "Last Month": "",
-  "This Year": "",
-  "All Time": ""
+  "Last 24 Hours": "24 שעות אחרונות",
+  "Today": "היום",
+  "Yesterday": "אתמול",
+  "Last 7 Days": "7 ימים אחרונים",
+  "Last 30 Days": "30 ימים אחרונים",
+  "This Month": "החודש",
+  "Last Month": "חודש קודם",
+  "This Year": "השנה",
+  "All Time": "כל זמן"
 }
