@@ -4,15 +4,15 @@
     "Allowed (cached)": "",
     "Blocked (regex/wildcard)": "Geblokkeerd (reguliere expressie)",
     "Blocked (blacklist)": "Geblokkeerd (blacklist)",
-    "Unknown": "",
+    "Unknown": "Onbekend",
     "Blocked (external)": "",
     "Blocked (gravity)": "",
     "Unspecified": "",
-    "Secure": "",
-    "Insecure": "",
+    "Secure": "Veilig",
+    "Insecure": "Onveilig",
     "Bogus": "",
     "Abandoned": "",
     "Reply": "",
-    "All": "",
-    "Allowed": ""
+    "All": "Alle",
+    "Allowed": "Toegestaan"
 }
