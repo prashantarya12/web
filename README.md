@@ -1,5 +1,7 @@
 # Pi-hole Web Interface
 
+This is PI-Contorl PI-hole.
+
 View stats and control your Pi-hole via this web interface. For the previous PHP-based web interface,
 see [pi-hole/AdminLTE](https://github.com/pi-hole/AdminLTE/).
 
@@ -27,7 +29,7 @@ see [pi-hole/AdminLTE](https://github.com/pi-hole/AdminLTE/).
   output of the project, not its source
 - Open the folder in the terminal
 - Run `npm install`
-    - This will install all the packages listed in `package.json` and will let you build/run the web interface
+    - This will install all the packages listed in `package.json` and will let you build/run the web interfaces
 - Run `npm run start-fake` to make sure that it is working
     - This will launch the web interface on port 3000 in debug mode
     - If it crashes/has a compile error it will show you the code and the error
